@@ -68,3 +68,9 @@ input[type="text"],
   @include at-query ($max, $medium) {
     display: none;
   }
+
+/* vi havde problemer med at tilføje ny farve, så vi har fundet en måde hvordan
+man laver farvekoden om så at det passer til Shopifys kodningssporg= liquid*/
+{{ '#7ab55c' | color_to_rgb }}
+/* exemple på hvad deres farve hedder, som i det her tilfælde skulle være en hvid*/
+$colorBorder
