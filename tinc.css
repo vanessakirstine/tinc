@@ -1,0 +1,67 @@
+/* vi har startet med at ændre wrapperen i css koden, så den ikke forblev
+max-width: 100% som gør at body ville fylde helt ud på siden. Derved
+har vi sat den til 80%, som gør at body bliver mindre.*/
+@include clearfix();
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0 $gutter/2;
+
+/* vi har ændret i css koden for at den skulle ligne vores mock-up.
+Vi har gjort så nav- baren passer til wrapperen. det her er i .nav-bar */
+
+  .nav-bar {
+  top: 110%; /*Dette er den del af koden vi har tilføjet */
+    max-width: 80%;
+    margin: auto;
+    border-radius: 10px; /* til og med har har vi rettet i nav-baren*/
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $colorNav;
+
+  a, button {
+    color: $colorNavText;
+
+    &:active,
+    &:focus {
+      opacity: 0.9;
+    }
+  }
+}
+
+/* Vi ville have vores search-bar og indkøbskurv til at matche vores navigationsbar
+så vi har sat en "border-radius: 10px; in i koden hos dem begge */
+input[type="text"],
+   input[type="search"] {
+     height: 44px;
+     border-radius: 10px;/* og her er vores border-radius*/
+     border: 0 none;
+     background-color: $headerButtonAndSearch;
+     color: color-control($headerButtonAndSearch);
+     @include transition(background-color 0.2s ease-out);
+     &:hover, &:focus {
+       background-color: darken($headerButtonAndSearch, 5%);
+       @include transition(background-color 0.05s ease-in);
+     }
+     &:focus {
+       outline: 0;
+     }
+   }
+ }
+}
+
+   .header-cart-btn {
+  @extend .btn;
+  position: relative;
+  line-height: 26px;
+  padding-bottom: 10px;
+  border: 0 none;
+  border-radius:10px; /* og her er den ved indkøbskurven */
+  margin-left: $gutter/2;
+  vertical-align: top;
+  background-color: $headerButtonAndSearch;
+  color: color-control($headerButtonAndSearch);
+
+  @include at-query ($max, $medium) {
+    display: none;
+  }
