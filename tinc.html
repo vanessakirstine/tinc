@@ -2,3 +2,51 @@
 vores fokus sider. Så vi har lavet "Siden er under konstruktion" om til en underoverskrift- h2 <-->
 <h2>Siden er uden konstruktion</h2>
 <p>Her kommer Tinc's handelsbetingelser til at være.</p>
+
+<!--> Her er der html koding af  en af produktbeskrivelserne. Vi har valgt kun
+at tilføje den ene her, da kodningen som vi har levet til de andre
+produkter ser ligesådan ud<-->
+<p><b>Hvedesugerør fra Ecostrawz</b></p>
+<p><span style="font-weight: 400;">50 stk.</span></p>
+<p><span style="font-weight: 400;">Ecostrawz sugerør, er 100% naturlig og kun
+  lavet af naturlig hvede, og er en af verdens mest bæredygtige og miljøvenlige
+  sugerør ledigt i dag. Unikt alternativ for plastiksugerør, hvor du får naturen
+  med ind i din drikke oplevelse.</span></p>
+<p><span style="font-weight: 400;">Sugerørene er lavet af hvede og er derfor et
+  engangssugerør, som derfor gør dem kompostbare og
+  kan nem smides i kompostbunken.</span></p>
+<p><span style="font-weight: 400;">Gør en forskel for miljøet, og
+  begynd at drikke din yndlingsdrink i dag med Ecostrawz!</span></p>
+
+<!--> Vi har fået lavet noget jQuery då at man kan se hvilken man er ved at
+  trykke på i navigationen. Knappen skifter farve når musen hover over den.
+  Vi har fundet scriptet og jQuery bibliotektet gennem w3schools, hvor vi så
+  har tilpasset det til vores side.<-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+      $(".site-nav--active").hover(function(){
+          $(this).css("background-color", "#af4432");
+          }, function(){
+          $(this).css("background-color", "#321500");
+      });
+  });
+    $(document).ready(function(){
+      $(".site-nav--has-dropdown").hover(function(){
+          $(this).css("background-color", "#af4432");
+          }, function(){
+          $(this).css("background-color", "#321500");
+      });
+  });
+  </script>
+
+<!-->Her er noget ekstra html kode vi lavede på kontakt os siden<-->
+<div style="text-align: center;">Åbningstider<br />Mandag - Torsdag: 10 - 18
+  <br />Fredag:  10 - 19<br />Lørdag: 10 - 17<br />Søndag: 11 - 16</div>
+<div style="text-align: center;"><em>(første og sidste søndag i måneden)</em>
+<br /><br /><a href="https://www.facebook.com/TINC.SHOP/" title="facebook">
+<img src="//cdn.shopify.com/s/files/1/0035/4916/7689/files/facebook_sort_icon.png?v=1544621742" alt="" />
+</a><a href="https://www.instagram.com/tinc.shop/" title="instagram">
+<img src="//cdn.shopify.com/s/files/1/0035/4916/7689/files/instagram_sort_icon.png?v=1544621753" alt="" /></a></div>
+<div style="text-align: center;"><span>Mail: aarhus@tinc.shop</span></div>
