@@ -10,8 +10,9 @@ hjørner.<-->
   padding-top: $gutter;
   padding-bottom: $gutter*2;
   background-color: $colorBody;
-  border-radius: 10px;
-  border: solid 2px {{ settings.content_secondary_colour }};
+  border-radius: 10px; <!-->denne kode har vi tilføjet<-->
+  border: solid 2px {{ settings.content_secondary_colour }}; <!-->denne kode
+  har vi tilføjet<-->
 
 <!-->shopify har lavet en hjælpe-guide inde i deres template hvori dem med //
 er ugyldige, indtil man fjerner dem. Vi har valgt at gå med repeat fixed, og
@@ -34,8 +35,9 @@ position: relative;
 max-width: 60%;
 width: 100%;
 margin: 0 auto $gutter;
-opacity: 0.8;
-border: solid 1px {{ settings.content_secondary_colour }};
+opacity: 0.8; <!-->denne kode har vi tilføjet<-->
+border: solid 1px {{ settings.content_secondary_colour }}; <!-->denne kode har
+vi tilføjet<-->
 
 <!-->ligeledes som søgebaren, har vi valgt at indkøbskurv-baren skal være på 0.8
 i opaciteten, så den passer designsmæssigt med søgebaren.
@@ -48,13 +50,14 @@ blive mere markeret og synligt. <-->
   line-height: 26px;
   padding-bottom: 10px;
   border: 0 none;
-  border-radius:10px;
+  border-radius:10px; <!-->dette har Vanessa tilføjet<-->
   margin-left: $gutter/2;
   vertical-align: top;
   background-color: $headerButtonAndSearch;
   color: color-control($headerButtonAndSearch);
-  opacity: 0.8;
-  border: solid 1px {{ settings.content_secondary_colour }};
+  opacity: 0.8; <!-->denne kode har vi tilføjet<-->
+  border: solid 1px {{ settings.content_secondary_colour }}; <!-->denne kode har
+  vi tilføjet<-->
 
 <!-->vi har valgt at integrere Tinc's adresse gennem Google Maps med denne kode.
 Her har vi desuden valgt at vælge at tilpasse størrelsen, så den passer til
