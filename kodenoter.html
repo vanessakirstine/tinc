@@ -2,7 +2,8 @@
 var der ingen baggrundsfarve, hvilket gjorde body gennemsigtig og derfor
 blev content ulæseligt. Vi har tilføjet border-radius, som gør kanterne på
 elementet mere runde, for at få et rundere design på siden. Herved er der
-også lagt en border på, for at give det lidt kant, når hvor body er med runde
+også lagt en border på i sort farve (#000000), for at give det lidt kant, når
+hvor body er med runde
 hjørner.<-->
 
 .main-content {
@@ -11,7 +12,7 @@ hjørner.<-->
   padding-bottom: $gutter*2;
   background-color: $colorBody;
   border-radius: 10px; <!-->denne kode har vi tilføjet<-->
-  border: solid 2px {{ settings.content_secondary_colour }}; <!-->denne kode
+  border: solid 2px {{ '#000000' | color_to_rgb }}; <!-->denne kode
   har vi tilføjet<-->
 
 <!-->shopify har lavet en hjælpe-guide inde i deres template hvori dem med //
@@ -28,7 +29,8 @@ plads mens body scroller, når man scroller op eller ned på hjemmesiden.<-->
 
 <!-->i vores søgebar på hjemmesiden, har vi valgt at opaciteten skal være på 0.8
 det vil efterfølgende gør at søgebaren er mere gennemsigtig. Der er blevet til-
-føjet en border, for at markere søgebaren og for at gøre den mere synlig med
+føjet en border med en sort farve (#000000), for at markere søgebaren og for at
+gøre den mere synlig med
 temafarven.<-->
 .search-bar {
 position: relative;
@@ -36,12 +38,13 @@ max-width: 60%;
 width: 100%;
 margin: 0 auto $gutter;
 opacity: 0.8; <!-->denne kode har vi tilføjet<-->
-border: solid 1px {{ settings.content_secondary_colour }}; <!-->denne kode har
+border: solid 1px {{ '#000000' | color_to_rgb }}; <!-->denne kode har
 vi tilføjet<-->
 
 <!-->ligeledes som søgebaren, har vi valgt at indkøbskurv-baren skal være på 0.8
 i opaciteten, så den passer designsmæssigt med søgebaren.
-I denne del af koden, har vi også tilføjes en border, for at få elementet til at
+I denne del af koden, har vi også tilføjes en border med en sort farve (#000000)
+for at få elementet til at
 blive mere markeret og synligt. <-->
 
 .header-cart-btn {
@@ -56,7 +59,7 @@ blive mere markeret og synligt. <-->
   background-color: $headerButtonAndSearch;
   color: color-control($headerButtonAndSearch);
   opacity: 0.8; <!-->denne kode har vi tilføjet<-->
-  border: solid 1px {{ settings.content_secondary_colour }}; <!-->denne kode har
+  border: solid 1px {{ '#000000' | color_to_rgb }}; <!-->denne kode har
   vi tilføjet<-->
 
 <!-->vi har valgt at integrere Tinc's adresse gennem Google Maps med denne kode.
