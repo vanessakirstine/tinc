@@ -1,13 +1,16 @@
 /* vi har startet med at ændre wrapperen i css koden, så den ikke forblev
 max-width: 100% som gør at body ville fylde helt ud på siden. Derved
-har vi sat den til 80%, som gør at body bliver mindre.*/
+har vi sat den til 80%, som gør at body bliver mindre. Den her del har Rigmor
+lavet.*/
+.wrapper {
 @include clearfix();
-  max-width: 80%;
+  max-width: 74%;
   margin: 0 auto;
-  padding: 0 $gutter/2;
+  padding: 0 $gutter/2;}
 
 /* vi har ændret i css koden for at den skulle ligne vores mock-up.
-Vi har gjort så nav- baren passer til wrapperen. det her er i .nav-bar */
+Vi har gjort så nav- baren passer til wrapperen. det her er i .nav-bar.
+Alt under dette i denne fil har Vanessa lavet. */
 
   .nav-bar {
   top: 110%; /*Dette er den del af koden vi har tilføjet */
