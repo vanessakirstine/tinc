@@ -1,0 +1,57 @@
+<!-->her har vi tilføjet en hvid baggrund (kaldet $colorBody) på body. Inden da,
+var der ingen baggrundsfarve, hvilket gjorde body gennemsigtig og derfor
+blev content ulæseligt. Vi har tilføjet border-radius, som gør kanterne på
+elementet mere runde, for at få et rundere design på siden. Herved er der
+også lagt en border på, for at give det lidt kant, når hvor body er med runde
+hjørner.<-->
+
+.main-content {
+  display: block;
+  padding-top: $gutter;
+  padding-bottom: $gutter*2;
+  background-color: $colorBody;
+  border-radius: 10px;
+  border: solid 2px {{ settings.content_secondary_colour }};
+
+<!-->shopify har lavet en hjælpe-guide inde i deres template hvori dem med //
+er ugyldige, indtil man fjerner dem. Vi har valgt at gå med repeat fixed, og
+derfor fjernet // fra den kode, så vi kunne få baggrunden fra wrapperen på
+plads mens body scroller, når man scroller op eller ned på hjemmesiden.<-->
+
+  body {
+ // background: url({{ 'background.jpg' | asset_url }}) 0 0 repeat scroll;
+ // background: url({{ 'background.jpg' | asset_url }}) 0 0 no-repeat scroll;
+  background: url({{ 'background.jpg' | asset_url }}) 0 0 repeat fixed;
+ // background: url({{ 'background.jpg' | asset_url }}) 0 0 no-repeat fixed;
+}
+
+<!-->i vores søgebar på hjemmesiden, har vi valgt at opaciteten skal være på 0.8
+det vil efterfølgende gør at søgebaren er mere gennemsigtig. Der er blevet til-
+føjet en border, for at markere søgebaren og for at gøre den mere synlig med
+temafarven.<-->
+.search-bar {
+position: relative;
+max-width: 60%;
+width: 100%;
+margin: 0 auto $gutter;
+opacity: 0.8;
+border: solid 1px {{ settings.content_secondary_colour }};
+
+<!-->ligeledes som søgebaren, har vi valgt at indkøbskurv-baren skal være på 0.8
+i opaciteten, så den passer designsmæssigt med søgebaren.
+I denne del af koden, har vi også tilføjes en border, for at få elementet til at
+blive mere markeret og synligt. <-->
+
+.header-cart-btn {
+  @extend .btn;
+  position: relative;
+  line-height: 26px;
+  padding-bottom: 10px;
+  border: 0 none;
+  border-radius:10px;
+  margin-left: $gutter/2;
+  vertical-align: top;
+  background-color: $headerButtonAndSearch;
+  color: color-control($headerButtonAndSearch);
+  opacity: 0.8;
+  border: solid 1px {{ settings.content_secondary_colour }};
